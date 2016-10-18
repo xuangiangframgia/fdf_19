@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Fdf19</title>
+    <title><%= t("layout.title") %></title>
     <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
+    <%= favicon_link_tag "logo.svg" %>
   </head>
-
   <body>
-    <%= yield %>
+    <%= render "layouts/header" %>
+    <main class="content">
+      <div class="container">
+        <div class="row">
+          <%= render "layouts/nav" %>
+          <div class="col-lg-9">
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+    </main>
+    <%= render "layouts/footer" %>
   </body>
 </html>

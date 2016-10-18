@@ -1,0 +1,70 @@
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="bg_topmenu">
+        <div id="TopMenu" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <ul>
+            <li><b><%= link_to t("layout.sign_in") %></b></li>
+            <li><b><%= link_to t("layout.sign_up") %></b></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bg_header ">
+        <div id="Header">
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+            <%= link_to root_path do %>
+              <%= image_tag "logo.png" %>
+            <% end %>
+          </div>
+          <div class="top top-search col-lg-3 col-md-3 col-sm-6 col-xs-6">
+            <form class="search" action="/search">
+              <input value="product" name="type" type="hidden">
+              <input placeholder="<%= t "layout.place_holder" %>" name="q" type="text">
+              <button type="submit" value=""><i class="fa fa-search"></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="Menu col-lg-9 col-md-12 col-sm-12 col-xs-12 visible-lg visible-md">
+          <nav>
+            <ul class="main-nav nav navbar-nav menu">
+              <li class="menu  active">
+                <%= link_to t("layout.home"), root_path %>
+                <div class="menu-caret"></div>
+              </li>
+              <li class="menu ">
+                <%= link_to t("layout.introduction") %>
+                <div class="menu-caret"></div>
+              </li>
+              <li class="menu ">
+                <%= link_to t("layout.food") %>
+                <div class="menu-caret"></div>
+              </li>
+              <li class="menu ">
+                <%= link_to t("layout.drink") %>
+                <div class="menu-caret"></div>
+              </li>
+              <li class="menu ">
+                <%= link_to t("layout.contact") %>
+                <div class="menu-caret"></div>
+              </li>
+              <li class="menu ">
+                <%= link_to t("layout.cart") %>
+                <div class="menu-caret"></div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="hot-line">
+          <i class="fa fa-volume-control-phone" aria-hidden="true"></i>
+          <%= t"layout.phone_number" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
