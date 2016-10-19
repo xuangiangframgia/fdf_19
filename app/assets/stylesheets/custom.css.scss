@@ -29,6 +29,12 @@ a:hover{
   margin-right:20px;
   color:#fff;
 }
+
+#TopMenu .dropdown-menu li a{
+  float:right;
+  margin-right:20px;
+  color:#000;
+}
 #TopMenu ul span {
   line-height: 26px;
   font-size: 12px;
@@ -213,9 +219,10 @@ ul.main-nav a:link, ul.main-nav a:visited
 }
 .hot-line{
   white-space: nowrap;
-  line-height: 38px;
+  line-height: 30px;
   float: right;
   font-size: 20px;
+  margin-top: 25px;
 }
 .top.top-search{
   float:right;
@@ -274,4 +281,31 @@ ul.left-nav li {
 .nav > li {
   position: relative;
   display: block;
+}
+.form-signin {
+  max-width: 380px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background-color: #eaffea;
+  border: 1px solid rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+.form-signin-heading{
+  margin-bottom: 30px;
+}
+.form-control {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+  &:focus {
+    z-index: 2;
+  }
+}
+.email{
+  margin-bottom: -1px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
