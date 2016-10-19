@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= t("layout.title") %></title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
+  </head>
+  <body>
+    <main class="content">
+      <div class="container">
+        <div class="row">
+          <%= render "layouts/admin" %>
+          <div class="col-lg-9">
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+    </main>
+    <%= render "layouts/footer" %>
+  </body>
+</html>
