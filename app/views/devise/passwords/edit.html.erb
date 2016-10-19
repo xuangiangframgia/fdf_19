@@ -1,0 +1,21 @@
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="form-signin">
+    <h2 class="form-signin-heading"><%= t("user.change_password")%></h2>
+
+    <%= f.hidden_field :reset_password_token %>
+
+    <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %><%= t "user.characters_minimum" %>)</em>
+    <% end %>
+    <%= f.password_field :password, autofocus: true, autocomplete: "off",
+      class: "form-control", placeholder: "user.password" %>
+
+    <%= f.password_field :password_confirmation, autocomplete: "off",
+      class: "form-control", placeholder: "user.password" %>
+
+    <%= f.submit t("user.change_password"), class: "btn btn-lg btn-primary btn-block" %>
+    <%= render "devise/shared/links" %>
+  </div>
+<% end %>
