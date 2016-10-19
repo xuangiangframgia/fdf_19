@@ -1,0 +1,90 @@
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+        data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only"><%= t "togglenavigation" %></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <li class="navbar-brand"><%= link_to t("administrator"), "#" %></li>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown ">
+          <li class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+            <%= t "account" %><span class="caret"></span>
+          </li>
+            <ul class="dropdown-menu" role="menu">
+              <li class=""><%= link_to t("profile"), "#" %></li>
+              <li class=""><%= link_to t("setting"), "#" %></li>
+              <li class="divider"></li>
+              <li><%= link_to t("logout"), "#" %></li>
+            </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid main-container">
+  <div class="col-md-2 sidebar">
+    <div class="row">
+      <div class="absolute-wrapper"> </div>
+        <div class="side-menu">
+          <nav class="navbar navbar-default" role="navigation">
+            <div class="side-menu-container">
+              <ul class="nav navbar-nav">
+                <li class="active"><%= link_to t("dashboard"), "#" %></li>
+                <li class="active"><%= link_to t("user"), "#"%></li>
+                <li class="panel panel-default" id="dropdown">
+                <li class="panel-body" data-toggle="collapse" href="#dropdown-lvl1">
+                  <%= t "category" %><span class="caret"></span></li>
+                <div id="dropdown-lvl1" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <ul class="nav navbar-nav">
+                      <li><%= link_to t("newcategory"), "#" %></li>
+                      <li><%= link_to t("showallcategory"), "#" %></li>
+                    </ul>
+                  </div>
+                </div>
+                <li class="panel panel-default" id="dropdown">
+                <li class="panel-body" data-toggle="collapse" href="#dropdown-lvl2">
+                  <%= t "product" %> <span class="caret"></span></li>
+                <div id="dropdown-lvl2" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <ul class="nav navbar-nav">
+                      <li><%= link_to t("newproduct"), "#" %></li>
+                      <li><%= link_to t("showallproduct"), "#" %></li>
+                    </ul>
+                  </div>
+                </div>
+                <li class="panel panel-default" id="dropdown">
+                <li class="panel-body" data-toggle="collapse" href="#dropdown-lvl3">
+                  <%= t "order" %> <span class="caret"></span>
+                </li>
+                <div id="dropdown-lvl3" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <ul class="nav navbar-nav">
+                      <li><%= link_to t("showallorder"), "#" %></li>
+                      <li><%= link_to t("historyorder"), "#" %></li>
+                    </ul>
+                  </div>
+                </div>
+                <li class="active"><%= link_to t("message"), "#" %></li>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-10 content">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+        </div>
+        <div class="panel-body">
+        </div>
+      </div>
+    </div>
+</div>
