@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="input-group">
+        <input type="search" id="search"
+        class="form-control" placeholder="Search">
+        <span class="input-group-btn">
+        </span>
+      </div>
+    </div>
+  </div>
+  </br>
+  <div>
+    <table class="table" id="table" >
+      <thead>
+        <tr>
+          <th><%= t "user.id"%></th>
+          <th><%= t "user.emails" %></th>
+          <th><%= t "user.function" %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @users.each do |user| %>
+        <tr>
+          <td class="hidden-xs"><%= user.id %></td>
+          <td class="hidden-xs">
+            <%= link_to user.email, admin_user_path(user) %></td>
+          <td>
+            <% if current_user.is_admin? && !user.is_user?(current_user) %>
+              <%= link_to t("user.delete"), admin_user_path(user),
+                class: "btn btn-danger", method: :delete, data: {confirm:
+                  t("user.sure")} %>
+            <% end %>
+          </td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <%= will_paginate @users %>
+</div>

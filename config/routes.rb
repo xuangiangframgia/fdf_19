@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
+  resources :staticpages, only: :index
   root "staticpages#index"
   namespace :admin do
-    root "admin#index"
+    root "admin/users#index"
+    resources :users
   end
 end

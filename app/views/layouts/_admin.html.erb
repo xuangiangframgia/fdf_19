@@ -20,7 +20,8 @@
               <li class=""><%= link_to t("profile"), "#" %></li>
               <li class=""><%= link_to t("setting"), "#" %></li>
               <li class="divider"></li>
-              <li><%= link_to t("logout"), "#" %></li>
+              <li><%= link_to t("logout"), destroy_user_session_path,
+                method: :delete %></li>
             </ul>
         </li>
       </ul>
@@ -36,7 +37,7 @@
             <div class="side-menu-container">
               <ul class="nav navbar-nav">
                 <li class="active"><%= link_to t("dashboard"), "#" %></li>
-                <li class="active"><%= link_to t("user"), "#"%></li>
+                <li class="active"><%= link_to t("user.user"), "#"%></li>
                 <li class="panel panel-default" id="dropdown">
                 <li class="panel-body" data-toggle="collapse" href="#dropdown-lvl1">
                   <%= t "category" %><span class="caret"></span></li>
@@ -79,12 +80,3 @@
         </div>
       </div>
     </div>
-    <div class="col-md-10 content">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-        </div>
-        <div class="panel-body">
-        </div>
-      </div>
-    </div>
-</div>
