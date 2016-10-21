@@ -29,7 +29,8 @@ group :development do
   gem "listen", "~> 3.0.5"
   gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
-  end
+  gem "pry-rails"
+end
 
 group :production do
   gem "pg", "0.18.4"
