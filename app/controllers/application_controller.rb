@@ -3,9 +3,7 @@ class ApplicationController < ActionController::Base
 
   protected
   def verify_admin
-    if current_user && current_user.is_admin?
-      redirect_to admin_users_path
-    end
+    redirect_to root_path unless current_user.is_admin?
   end
 
   def load_user

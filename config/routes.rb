@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   root "staticpages#index"
   namespace :admin do
     root "admin/users#index"
-    resources :users
+    resources :users, :categories
   end
 end
