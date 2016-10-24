@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-7">
+      <table class="table table-list-search">
+        <thead>
+          <tr>
+            <th><%= t "category.id"%></th>
+            <th><%= t "category.name" %></th>
+            <th><%= t "category.function" %></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @categories.each do |category| %>
+          <tr>
+            <td class="hidden-xs"><%= category.id %></td>
+            <td class="hidden-xs"><%= link_to category.name,
+              admin_category_path(category) %></td>
+            <td>
+              <%= link_to t("category.edit"), edit_admin_category_path(category),
+                class: "btn btn-default" %>
+              <%= link_to t("category.delete"), admin_category_path(category),
+                class: "btn btn-danger", method: :delete, data: {confirm: t("category.sure")} %>
+            </td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-3">
+      <form action="#" method="get">
+        <div class="input-group">
+          <input class="form-control" id="system-search" name="q" placeholder="Search for" required>
+          <span class="input-group-btn">
+          <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+          </span>
+        </div>
+      </form>
+    </div>
+  </div>
+  <%= will_paginate @categories %>
+</div>
