@@ -51,12 +51,12 @@
                 </div>
                 <li class="panel panel-default" id="dropdown">
                 <li class="panel-body" data-toggle="collapse" href="#dropdown-lvl2">
-                  <%= t "product" %> <span class="caret"></span></li>
+                  <%= t "product.product" %> <span class="caret"></span></li>
                 <div id="dropdown-lvl2" class="panel-collapse collapse">
                   <div class="panel-body">
                     <ul class="nav navbar-nav">
-                      <li><%= link_to t("newproduct"), "#" %></li>
-                      <li><%= link_to t("showallproduct"), "#" %></li>
+                      <li><%= link_to t("product.newproduct"), new_admin_product_path %></li>
+                      <li><%= link_to t("product.showallproduct"), admin_products_path %></li>
                     </ul>
                   </div>
                 </div>
