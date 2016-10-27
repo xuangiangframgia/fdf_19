@@ -1,0 +1,29 @@
+<table class="table table-striped table-bordered table-hover table-condensed">
+  <thead>
+    <th><%= t "order.date" %></th>
+    <th><%= t "order.order" %></th>
+    <th><%= t "order.message" %></th>
+    <th><%= t "order.status" %></th>
+    <th><%= t "order.order_total" %></th>
+    <th><%= t "order.function" %></th>
+  </thead>
+  <% @orders.each do |order| %>
+  <tbody>
+    <td><%= order.created_at.strftime('%b %d, %Y') %></td>
+    <td><%= link_to order.id, order %></td>
+    <td><%= order.message %></td>
+    <td>
+      <% if order.status? %>
+        <%= t "cart.accept" %>
+      <% else %>
+        <%= t "cart.pending" %>
+      <% end %>
+    </td>
+    <td><%= number_to_currency order.order_total %></td>
+    <td>
+      <%= link_to t("order.edit"), edit_admin_order_path(order),
+        class: "btn btn-default" %>
+    </td>
+  </tbody>
+  <% end %>
+</table>

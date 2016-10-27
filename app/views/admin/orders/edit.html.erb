@@ -1,0 +1,18 @@
+<%= simple_form_for [:admin, @order], :html => {:multipart => true} do |f| %>
+<%= render "shared/error_messages", object: @order %>
+  <div id="form-main">
+    <div id="form-div">
+      <div class="form" id="form1">
+        <%= f.input :created_at, disabled: true, label: t("orders.time") %>
+
+        <%= f.input :message, disabled: true, label: t("orders.message") %>
+
+        <%= f.input :order_total, label: t("orders.order_total") %>
+
+        <%= f.input :status, check_box: t("orders.status") %>
+
+        <%= f.button :submit,  class: "btn btn-lg btn-primary btn-block" %>
+      </div>
+    </div>
+  </div>
+<% end %>
