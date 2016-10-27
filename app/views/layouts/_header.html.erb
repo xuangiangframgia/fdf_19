@@ -4,6 +4,7 @@
       <div class="bg_topmenu">
         <div id="TopMenu" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <ul>
+            <li><%= t "cart.count" %><%= @cart.count %></li>
             <% if user_signed_in? %>
               <% if current_user.is_admin? %>
                 <li><%= link_to t("admin"), admin_users_path ,
@@ -76,7 +77,7 @@
                 <div class="menu-caret"></div>
               </li>
               <li class="menu ">
-                <%= link_to t("layout.cart") %>
+                <%= link_to t("layout.cart"), carts_path  %>
                 <div class="menu-caret"></div>
               </li>
             </ul>
