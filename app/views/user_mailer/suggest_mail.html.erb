@@ -1,0 +1,6 @@
+<h1><%= t "mail.title_suggest" %></h1>
+<p><b><%= t "mail.note_suggest" %></b></p>
+<%= t "mail.name" %><%= @suggest.user.name %><br>
+<%= link_to t("mail.click_here"), suggest_url(@suggest.id)%>
+<%= t "mail.date" %>
+<%= @suggest.created_at.strftime('%b %d, %Y') %>
