@@ -1,5 +1,7 @@
 source "https://rubygems.org"
 
+gem "sidekiq"
+gem "whenever", :require => false
 gem "social-share-button", "0.2.1"
 gem "omniauth-facebook"
 gem "carrierwave", "0.10.0"
