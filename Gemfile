@@ -28,8 +28,18 @@ gem "turbolinks", "~> 5"
 gem "jbuilder", "~> 2.5"
 
 group :development, :test do
-  gem "sqlite3"
   gem "byebug", platform: :mri
+end
+
+group :test do
+  gem "shoulda-matchers", "~> 3.0", require: false
+  gem "database_cleaner", "~> 1.5"
+  gem "faker"
+  gem "rspec-rails", "~> 3.4"
+  gem "capybara"
+  gem "factory_girl_rails"
+  gem "simplecov", require: false
+  gem "rails-controller-testing"
 end
 
 group :development do
