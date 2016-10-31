@@ -50,16 +50,6 @@ group :development do
   gem "pry-rails"
 end
 
-group :test do
-  gem "rspec-rails"
-  gem "capybara"
-  gem "factory_girl_rails"
-  gem "shoulda-matchers", "~> 3.0", require: false
-  gem "database_cleaner", "~> 1.5"
-  gem "faker"
-  gem "simplecov", require: false
-end
-
 group :production do
   gem "pg", "0.18.4"
 end
